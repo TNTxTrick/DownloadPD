@@ -4,6 +4,10 @@ const cheerio = require('cheerio');
 
 const app = express();
 
+app.get('/', async (req, res) => {
+  res.send('Hi');
+}
+
 app.get('/douyin', async (req, res) => {
   const url = req.query.url;
   if (!url) {
